@@ -2,7 +2,6 @@ void setup() {
   size(615, 615);
   rectMode(CENTER);
   textAlign(CENTER);
-  noLoop();
 
   printAll();
 }
