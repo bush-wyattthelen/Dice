@@ -2,6 +2,7 @@ void setup() {
   size(615, 615);
   rectMode(CENTER);
   textAlign(CENTER);
+  noLoop();
 
   printAll();
 }
@@ -27,8 +28,8 @@ void printAll() {
   // Left displays tally, right works as a reroll button
   
   fill(255);
-  square(270, 570, dieSize);
-  square(345, 570, dieSize);
+  rect(270, 570, dieSize, dieSize);
+  rect(345, 570, dieSize, dieSize);
   
   fill(0);
   textSize(18);
