@@ -17,36 +17,36 @@ class Die {
     square(x, y, dieSize);
     
     fill(0);
-    if (this.face == 1) circle(x, y, circleSize);
+    if (this.face == 1) ellipse(x, y, circleSize, circleSize);
     else if (this.face == 2) {
-      circle(x - circleSize, y, circleSize);
-      circle(x + circleSize, y, circleSize);
+      ellipse(x - circleSize, y, circleSize, circleSize);
+      ellipse(x + circleSize, y, circleSize, circleSize);
     }
     else if (this.face == 3) {
-      circle(x - circleSize, y + circleSize, circleSize);
-      circle(x + circleSize, y + circleSize, circleSize);
-      circle(x, y - circleSize, circleSize);
+      ellipse(x - circleSize, y + circleSize, circleSize, circleSize);
+      ellipse(x + circleSize, y + circleSize, circleSize, circleSize);
+      ellipse(x, y - circleSize, circleSize, circleSize);
     }
     else if (this.face == 4) {
-      circle(x - circleSize, y + circleSize, circleSize);
-      circle(x + circleSize, y + circleSize, circleSize);
-      circle(x - circleSize, y - circleSize, circleSize);
-      circle(x + circleSize, y - circleSize, circleSize);
+      ellipse(x - circleSize, y + circleSize, circleSize, circleSize);
+      ellipse(x + circleSize, y + circleSize, circleSize, circleSize);
+      ellipse(x - circleSize, y - circleSize, circleSize, circleSize);
+      ellipse(x + circleSize, y - circleSize, circleSize, circleSize);
     }
     else if (this.face == 5) {
-      circle(x, y, circleSize);
-      circle(x - circleSize * 1.5, y + circleSize * 1.5, circleSize);
-      circle(x + circleSize * 1.5, y + circleSize * 1.5, circleSize);
-      circle(x - circleSize * 1.5, y - circleSize * 1.5, circleSize);
-      circle(x + circleSize * 1.5, y - circleSize * 1.5, circleSize);
+      ellipse(x, y, circleSize, circleSize);
+      ellipse(x - circleSize * 1.5, y + circleSize * 1.5, circleSize, circleSize);
+      ellipse(x + circleSize * 1.5, y + circleSize * 1.5, circleSize, circleSize);
+      ellipse(x - circleSize * 1.5, y - circleSize * 1.5, circleSize, circleSize);
+      ellipse(x + circleSize * 1.5, y - circleSize * 1.5, circleSize, circleSize);
     }
     else if (this.face == 6) {
-      circle(x - circleSize, y + 1.5 * circleSize, circleSize);
-      circle(x + circleSize, y + 1.5 * circleSize, circleSize);
-      circle(x - circleSize, y - 1.5 * circleSize, circleSize);
-      circle(x + circleSize, y - 1.5 * circleSize, circleSize);
-      circle(x - circleSize, y, circleSize);
-      circle(x + circleSize, y, circleSize);
+      ellipse(x - circleSize, y + 1.5 * circleSize, circleSize, circleSize);
+      ellipse(x + circleSize, y + 1.5 * circleSize, circleSize, circleSize);
+      ellipse(x - circleSize, y - 1.5 * circleSize, circleSize, circleSize);
+      ellipse(x + circleSize, y - 1.5 * circleSize, circleSize, circleSize);
+      ellipse(x - circleSize, y, circleSize, circleSize);
+      ellipse(x + circleSize, y, circleSize, circleSize);
     }
   }
 }
