@@ -35,16 +35,16 @@ class Die {
     }
     else if (this.face == 5) {
       ellipse(x, y, circleSize, circleSize);
-      ellipse(x - circleSize * 1.5, y + circleSize * 1.5, circleSize, circleSize);
-      ellipse(x + circleSize * 1.5, y + circleSize * 1.5, circleSize, circleSize);
-      ellipse(x - circleSize * 1.5, y - circleSize * 1.5, circleSize, circleSize);
-      ellipse(x + circleSize * 1.5, y - circleSize * 1.5, circleSize, circleSize);
+      ellipse((int)(x - circleSize * 1.5), (int)(y + circleSize * 1.5), circleSize, circleSize);
+      ellipse((int)(x + circleSize * 1.5), (int)(y + circleSize * 1.5), circleSize, circleSize);
+      ellipse((int)(x - circleSize * 1.5), (int)(y - circleSize * 1.5), circleSize, circleSize);
+      ellipse((int)(x + circleSize * 1.5), (int)(y - circleSize * 1.5), circleSize, circleSize);
     }
     else if (this.face == 6) {
-      ellipse(x - circleSize, y + 1.5 * circleSize, circleSize, circleSize);
-      ellipse(x + circleSize, y + 1.5 * circleSize, circleSize, circleSize);
-      ellipse(x - circleSize, y - 1.5 * circleSize, circleSize, circleSize);
-      ellipse(x + circleSize, y - 1.5 * circleSize, circleSize, circleSize);
+      ellipse(x - circleSize, (int)(y + 1.5 * circleSize), circleSize, circleSize);
+      ellipse(x + circleSize, (int)(y + 1.5 * circleSize), circleSize, circleSize);
+      ellipse(x - circleSize, (int)(y - 1.5 * circleSize), circleSize, circleSize);
+      ellipse(x + circleSize, (int)(y - 1.5 * circleSize), circleSize, circleSize);
       ellipse(x - circleSize, y, circleSize, circleSize);
       ellipse(x + circleSize, y, circleSize, circleSize);
     }
