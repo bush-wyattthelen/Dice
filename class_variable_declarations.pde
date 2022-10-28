@@ -14,7 +14,7 @@ class Die {
   
   void show() {
     fill(255);
-    square(x, y, dieSize);
+    rect(x, y, dieSize, dieSize);
     
     fill(0);
     if (this.face == 1) ellipse(x, y, circleSize, circleSize);
