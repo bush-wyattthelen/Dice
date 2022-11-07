@@ -1,5 +1,15 @@
+int numColumns = 5;
+int numRows = 5;
+
+int tally = 0;
+int numRolls = 0;
+
+void settings() {
+  size(75 * numColumns + 15, 75 * numRows + 15);
+}
+
+
 void setup() {
-  size(615, 615);
   rectMode(CENTER);
   textAlign(CENTER);
 
@@ -10,16 +20,23 @@ void draw() {}
 
 void printAll() {
   
-  int tally = 0;
+  background(#54B0FF);
   
   // Create and show die, excluding two bottom center dice
   
-  for (int i = 45; i < height; i += 75) {
-    for (int j = 45; j < width; j = (!(i == 570 && j == 195)) ? j + 75 : j + 225) {
-      int tempFace = (int)(Math.random() * 6 + 1);
-      Die tempDie = new Die(j, i, tempFace);
-      tally += tempFace;
+  numRolls++;
+  
+  for (int i = 0; i < numRows; i++) {
+    for (int j = 0; j < numColumns; j++) {
+      if (i == numRows - 1 && j == (int)((float)numColumns / 2 - 1)) {
+        if(numColumns % 2 == 1) j += 2;
+        else j++;
+      }
+      else {
+      Die tempDie = new Die(j * 75 + 45, i * 75 + 45);
+      tempDie.roll();
       tempDie.show();
+      }
     }
   }
   
@@ -27,21 +44,21 @@ void printAll() {
   // Left displays tally, right works as a reroll button
   
   fill(255);
-  rect(270, 570, dieSize, dieSize);
-  rect(345, 570, dieSize, dieSize);
+  rect(width / 2 - 37, 75 * numRows - 30, dieSize, dieSize);
+  rect(width / 2 + 37, 75 * numRows - 30, dieSize, dieSize);
   
   fill(0);
   textSize(18);
   
-  text("Tally:", 270, 568);
-  text(tally, 270, 586);
+  text("Avg:", width / 2 - 37, 75 * numRows - 32);
+  text((int)((float)tally / numRolls), width / 2 - 37, 75 * numRows - 14);
   
-  text("RE-", 345, 568);
-  text("ROLL", 345, 586);
+  text("RE-", width / 2 + 37, 75 * numRows - 32);
+  text("ROLL", width / 2 + 37, 75 * numRows - 14);
 }
 
 void mouseClicked() {
-  if (mouseX >= 315 && mouseX <= 375 && mouseY >= 540 && mouseY < 600) {
+  if (mouseX >= width / 2 + 7 && mouseX <= width / 2 + 67 && mouseY >= 75 * numRows - 62 && mouseY < 75 * numRows - 2) {
     printAll();
   }
 }
