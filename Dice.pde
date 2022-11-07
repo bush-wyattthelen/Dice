@@ -1,15 +1,17 @@
-int numColumns = 5;
-int numRows = 5;
+int numColumns = 8;
+int numRows = 8;
 
 int tally = 0;
 int numRolls = 0;
 
+/*  Remove this comment and comment out the hardcoded size() in setup to enable dynamic window scaling
 void settings() {
   size(75 * numColumns + 15, 75 * numRows + 15);
-}
+}*/
 
 
 void setup() {
+  size(615, 615);
   rectMode(CENTER);
   textAlign(CENTER);
 
